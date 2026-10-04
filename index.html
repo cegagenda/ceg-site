@@ -106,10 +106,7 @@
   .hero__sweep { position: absolute; top: -20%; bottom: -20%; left: 0; width: 18%;
     background: linear-gradient(100deg, transparent, rgba(255,255,255,0) 20%, rgba(255,246,230,0.55) 50%, rgba(255,255,255,0) 80%, transparent);
     transform: translateX(-120%) skewX(-12deg); will-change: transform; }
-  @media (prefers-reduced-motion: no-preference) {
-    .hero__sweep { animation: sweep 7.5s var(--sc-ease-in-out) 1.2s infinite; }
-  }
-  @keyframes sweep { 0% { transform: translateX(260%) skewX(-12deg); } 38%, 100% { transform: translateX(560%) skewX(-12deg); } }
+  .hero__sweep { opacity: 0; }
   .hero__waves { inset: -10% -5%; opacity: 0.6;
     -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 34%, transparent 58%); mask-image: linear-gradient(90deg, #000 0%, #000 34%, transparent 58%); }
   .hero__floor { inset: auto 0 0 0; height: 16svh; background: linear-gradient(to top, var(--sc-canvas), transparent); z-index: 5; }
@@ -275,7 +272,7 @@
 
   /* --------------------------------------------------------------- fim -- */
   .fim { background: var(--sc-canvas); }
-  .fim__stage { display: grid; grid-template-rows: 1fr auto; }
+  .fim__stage { display: grid; grid-template-rows: 1fr; }
   .fim__main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--bar-h) + 2rem) var(--sc-gutter) 2rem; max-width: var(--sc-maxw); margin-inline: auto; width: 100%; }
   .fim h2 { font-size: clamp(3rem, 1rem + 6vw, 7.5rem); line-height: 0.92; }
   .fim__lede { margin-top: var(--sc-5); font-size: var(--sc-t-lg); color: var(--sc-ink-soft); max-width: 30rem; line-height: 1.5; }
@@ -334,6 +331,12 @@
   .foot { background: var(--orange-deep); color: #fff; padding: var(--sc-5) var(--sc-gutter); display: flex; flex-wrap: wrap; gap: var(--sc-3) var(--sc-7); align-items: center; justify-content: space-between; font-size: var(--sc-t-xs); line-height: 1.5; }
   .foot .brand__sub { border-color: #fff; }
   .foot p { margin: 0; max-width: 54rem; }
+  .autoria { width: 100%; max-width: none !important; display: flex; align-items: center; justify-content: center; gap: 9px;
+    margin-top: 2px !important; padding-top: var(--sc-3); border-top: 1px solid rgba(255,255,255,0.16);
+    font-size: 0.68rem; letter-spacing: 0.04em; }
+  .autoria > span { opacity: 0.86; }
+  .autoria img { display: block; height: 16px; width: auto; opacity: 0.6; transition: opacity 300ms var(--sc-ease-out); }
+  .autoria:hover img { opacity: 1; }
 
   .hidden-wave { display: none; }
 
@@ -404,6 +407,7 @@
     .foot { padding: 0.8rem var(--sc-gutter); }
     .foot .brand { display: none; }
     .foot p { font-size: 0.68rem; }
+    .foot { justify-content: center; text-align: center; padding-bottom: calc(0.8rem + env(safe-area-inset-bottom)); }
   }
   @media (min-width: 861px) { .rota__scrim { display: none; } }
   @media (max-width: 860px) and (max-height: 720px) {
@@ -760,17 +764,22 @@
           </div>
         </div>
       </div>
-      <footer class="foot">
-        <span class="brand" aria-hidden="true">
-          <span class="brand__icons"><svg><use href="#ico-stomach"/></svg><svg><use href="#ico-gut"/></svg></span>
-          <span class="brand__type"><span class="brand__word">CEG</span><span class="brand__sub">Clínica de Endoscopia do Guarujá</span></span>
-        </span>
-        <p>CEG Clínica de Endoscopia do Guarujá Ltda. · CNPJ 14.989.482/0001-69 · Diretor clínico: Dr. Thiago De Bortoli Nogueira · CRM 115100 · RQE 75318</p>
-      </footer>
     </div>
   </section>
 
 </main>
+
+    <footer class="foot">
+      <span class="brand" aria-hidden="true">
+        <span class="brand__icons"><svg><use href="#ico-stomach"/></svg><svg><use href="#ico-gut"/></svg></span>
+        <span class="brand__type"><span class="brand__word">CEG</span><span class="brand__sub">Clínica de Endoscopia do Guarujá</span></span>
+      </span>
+      <p class="foot__legal">CEG Clínica de Endoscopia do Guarujá Ltda. · CNPJ 14.989.482/0001-69 · Diretor clínico: Dr. Thiago De Bortoli Nogueira · CRM 115100 · RQE 75318</p>
+      <p class="autoria">
+        <span>Desenvolvido por</span>
+        <img src="assets/logo-ecm-branco.png" width="150" height="54" alt="ECM, Eduardo Chaves Marques, desenvolvedor do site">
+      </p>
+    </footer>
 
 <script src="scrollcraft.js"></script>
 <script>ScrollCraft.mount(document.body);</script>
@@ -798,6 +807,7 @@
      motion is allowed; under reduced motion it follows the reader's scroll. */
   var art = hero.querySelector('.hero__art');
   var hGlow = document.getElementById('heroGlow'), hCore = document.getElementById('heroCore');
+  var hSweep = hero.querySelector('.hero__sweep');
   var tallMQ = matchMedia('(max-width: 860px), (max-aspect-ratio: 13/10)');
   var ROUTE_D = [[0.7075, 0.1478], [0.715, 0.2508], [0.74, 0.2956], [0.8, 0.3762], [0.845, 0.5017], [0.8125, 0.6271], [0.74, 0.6987], [0.665, 0.6584], [0.6275, 0.5957], [0.5925, 0.5957], [0.575, 0.6495], [0.5925, 0.7032]];
   var ROUTE_M = [[0.512, 0.0851], [0.5258, 0.1445], [0.5717, 0.1703], [0.6817, 0.2167], [0.7643, 0.2889], [0.7047, 0.3612], [0.5717, 0.4024], [0.4341, 0.3792], [0.3653, 0.3431], [0.301, 0.3431], [0.2689, 0.3741], [0.301, 0.405]];
@@ -812,7 +822,11 @@
     var t, a;
     // Driven by the reader's scroll on every device: the light enters at the
     // esophagus and travels to the duodenum as the hero is scrolled.
-    t = smooth(clamp(hp * 1.5, 0, 1)); a = 0.9;
+    t = smooth(clamp((hp - 0.03) * 1.6, 0, 1));
+    a = 0.9 * map(hp, 0.02, 0.09) * (1 - map(hp, 0.6, 0.68));
+    var sw = clamp((hp - 0.05) / 0.5, 0, 1);
+    hSweep.style.transform = 'translateX(' + (260 + 300 * sw).toFixed(1) + '%) skewX(-12deg)';
+    hSweep.style.opacity = (Math.sin(Math.PI * sw) * 0.9).toFixed(3);
     var pt = along(tallMQ.matches ? ROUTE_M : ROUTE_D, t);
     var w = art.offsetWidth, h = art.offsetHeight;
     var tr = 'translate3d(' + (pt[0] * w).toFixed(1) + 'px,' + (pt[1] * h).toFixed(1) + 'px,0)';
