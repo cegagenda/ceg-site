@@ -1,0 +1,1206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CEG · Clínica de Endoscopia do Guarujá</title>
+<meta name="description" content="Endoscopia, colonoscopia e exames digestivos no Guarujá. Uma clínica dedicada só a exames, do pedido médico ao laudo. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#FBF6F1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><clipPath id='c'><circle cx='50' cy='50' r='48'/></clipPath><circle cx='50' cy='50' r='48' fill='%23EC6A12'/><path clip-path='url(%23c)' fill='white' d='M45.6 -3 L45.6 24.7 L46.4 28.5 C46.8 29.8 46.9 31.3 48.3 32.3 C49.7 33.3 52.2 34.2 55 34.6 C57.8 35.0 61.6 34.5 65 34.8 C68.4 35.1 73.0 35.3 75.2 36.2 C77.4 37.1 77.6 38.7 78.4 40 C79.2 41.3 79.8 42.6 80.1 43.9 C80.4 45.2 80.4 46.4 80.5 47.7 C80.6 49.0 80.7 50.2 80.5 51.5 C80.3 52.8 80.0 54.1 79.6 55.4 C79.2 56.7 78.8 57.9 78.2 59.2 C77.6 60.5 76.9 61.8 76.1 63.1 C75.3 64.4 74.4 65.6 73.2 66.9 C72.0 68.2 70.8 69.4 68.8 70.7 C66.8 72.0 64.3 73.5 61.5 74.6 C58.7 75.6 55.2 76.6 52 77 C48.8 77.4 44.9 77.2 42 76.8 C39.1 76.4 36.6 75.3 34.6 74.6 C32.6 73.9 31.4 72.6 30 72.6 C28.6 72.6 27.2 73.6 26 74.6 C24.8 75.6 23.5 77.1 22.9 78.4 C22.3 79.7 22.7 81.0 22.6 82.3 L22.5 86 L22.5 94 L14 94 L15.5 84 C16.0 81.4 16.6 80.0 16.8 78.4 C17.1 76.8 16.7 75.9 17 74.6 C17.3 73.3 17.3 72.0 18.7 70.7 C20.1 69.4 23.0 67.9 25.2 66.9 C27.4 65.9 29.9 65.4 32 64.8 C34.1 64.2 36.2 64.0 37.7 63.1 C39.2 62.2 39.9 60.5 40.8 59.2 C41.7 57.9 42.5 56.7 43.1 55.4 C43.7 54.1 44.0 52.8 44.4 51.5 C44.8 50.2 45.1 49.0 45.2 47.7 C45.3 46.4 45.4 45.2 45.2 43.9 C45.0 42.6 44.8 41.3 44.2 40 C43.6 38.7 42.2 37.5 41.4 36.2 C40.6 34.9 40.0 33.6 39.6 32.3 C39.2 31.0 39.2 29.8 39.1 28.5 L38.9 24.7 L38.9 -3 L45.6 -3 Z'/></svg>"><circle cx='16' cy='16' r='15' fill='%23E2590B'/><path d='M15 6v5c0 2 2 3 4 4 4 2 5 6 4 9-2 4-6 5-10 4-2-1-4 0-5 2' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-b-d.webp" media="(min-width: 861px) and (min-aspect-ratio: 13/10)">
+<link rel="preload" as="image" href="assets/hero-b-m.webp" media="(max-width: 860px), (max-aspect-ratio: 13/10)">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+  :root {
+    --sc-canvas:     #FBF6F1;
+    --sc-surface:    #F4EAE0;
+    --sc-ink:        #1C1410;
+    --sc-ink-soft:   #5E4E44;
+    --sc-accent:     #E2590B;
+    --sc-accent-ink: #FFFFFF;
+    --sc-font-display: "Oswald", "Arial Narrow", system-ui, sans-serif;
+    --sc-font-text:    "Outfit", system-ui, sans-serif;
+    --sc-font-mono:    "Outfit", system-ui, sans-serif;
+
+    --orange-deep: #B5440A;   /* small orange text on the light ground, 5.1:1 */
+    --orange-btn:  #C9480A;   /* white button label, 4.8:1 */
+    --orange-glow: #FF9A3C;
+    --night:       #120B08;
+    --night-ink:   #F7EDE4;
+    --night-soft:  #BFAE9F;
+    --night-accent:#FF8A45;
+
+    --sc-shadow-color: 22 60% 30%;
+    --sc-e1: 0 1px 2px hsl(var(--sc-shadow-color) / 0.10), 0 2px 6px -1px hsl(var(--sc-shadow-color) / 0.08);
+    --sc-e2: 0 2px 4px hsl(var(--sc-shadow-color) / 0.10), 0 10px 22px -6px hsl(var(--sc-shadow-color) / 0.16);
+    --sc-e3: 0 6px 12px hsl(var(--sc-shadow-color) / 0.10), 0 30px 60px -16px hsl(var(--sc-shadow-color) / 0.24);
+    --sc-edge: inset 0 1px 0 rgba(255,255,255,0.7);
+    --bar-h: 4.25rem;
+  }
+  html { scroll-padding-top: var(--bar-h); }
+  body { background: var(--sc-canvas); }
+  .sc-display { font-weight: 600; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.98; }
+  .hl { color: var(--sc-accent); }
+
+  /* ---------------------------------------------------------- brand mark -- */
+  .brand { display: inline-flex; align-items: center; gap: 0.55rem; text-decoration: none; color: inherit; }
+  .brand__icons { display: flex; gap: 0.16rem; }
+  .brand__icons svg { width: 2.15rem; height: 2.15rem; }
+  .brand__type { display: grid; line-height: 1; }
+  .brand__word { font-family: var(--sc-font-display); font-weight: 700; font-size: 1.85rem; letter-spacing: 0.14em; line-height: 0.86; }
+  .brand__sub { font-size: 0.56rem; letter-spacing: 0.08em; margin-top: 0.3rem; padding-top: 0.22rem; border-top: 1.5px solid var(--sc-accent); white-space: nowrap; }
+
+  /* ----------------------------------------------------------------- bar -- */
+  .bar {
+    position: fixed; inset: 0 0 auto 0; z-index: var(--sc-z-chrome);
+    height: var(--bar-h);
+    display: flex; align-items: center; justify-content: space-between; gap: var(--sc-5);
+    padding-inline: var(--sc-gutter);
+    background: color-mix(in oklab, var(--sc-canvas) 94%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--sc-ink) 8%, transparent);
+    color: var(--sc-ink);
+    transition: background-color var(--sc-d-base) var(--sc-ease-out), color var(--sc-d-base) var(--sc-ease-out), border-color var(--sc-d-base) var(--sc-ease-out);
+  }
+  .bar.is-night { background: color-mix(in oklab, var(--night) 92%, transparent); color: var(--night-ink); border-color: rgba(255,255,255,0.07); }
+  .bar.is-night .brand__sub { border-color: var(--night-accent); }
+  .bar__nav { display: flex; align-items: center; gap: var(--sc-6); }
+  .bar__nav a:not(.btn) { text-decoration: none; font-size: var(--sc-t-sm); font-weight: 500; opacity: 0.86; transition: opacity var(--sc-d-fast) var(--sc-ease-out); }
+  .bar__nav a:not(.btn):hover { opacity: 1; text-decoration: underline; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    min-height: 2.9rem; padding: 0 1.35rem;
+    border-radius: var(--sc-r-pill);
+    background: var(--orange-btn); color: #fff;
+    font-weight: 600; font-size: var(--sc-t-sm); text-decoration: none; white-space: nowrap;
+    box-shadow: var(--sc-e2), inset 0 1px 0 rgba(255,255,255,0.22);
+    transition: background-color var(--sc-d-fast) var(--sc-ease-out), transform 120ms var(--sc-ease-out);
+  }
+  .btn:hover { background: var(--orange-deep); }
+  .btn:active { transform: scale(0.97); }
+  .btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+  .btn--lg { min-height: 3.6rem; padding: 0 1.9rem; font-size: var(--sc-t-base); }
+  .link { font-weight: 600; color: var(--orange-deep); text-decoration: underline; text-decoration-thickness: 1.5px; }
+
+  /* ---------------------------------------------------------------- hero -- */
+  .hero { background: #F9F2EA; }
+  .hero__stage { isolation: isolate; background: #F9F2EA; }
+  .hero__plane { position: absolute; pointer-events: none; will-change: transform; }
+  /* The art box reproduces object-fit: cover by hand, so the glass overlays
+     (masked to the stomach) stay pinned to the exact pixels of the plate. */
+  .hero__art { --ar: 1.7917; --ox: 0.72; --w: max(100%, calc(100svh * var(--ar)));
+    width: var(--w); aspect-ratio: 2752 / 1536; left: calc((100% - var(--w)) * var(--ox)); top: 50%; margin-top: calc(var(--w) / var(--ar) / -2);
+    transform-origin: 72% 52%; }
+  .hero__art picture, .hero__plate { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+  .hero__plate { object-fit: cover; }
+  .hero__glass { position: absolute; inset: 0; mix-blend-mode: screen; pointer-events: none;
+    -webkit-mask: url(assets/hero-b-mask-d.png) center / 100% 100% no-repeat; mask: url(assets/hero-b-mask-d.png) center / 100% 100% no-repeat; }
+  .hero__glow { position: absolute; left: 0; top: 0; width: 34%; aspect-ratio: 1; margin: -17% 0 0 -17%;
+    background: radial-gradient(closest-side, rgba(255,250,235,0.95), rgba(255,190,110,0.55) 32%, rgba(255,140,50,0.18) 62%, transparent);
+    will-change: transform, opacity; opacity: 0; }
+  .hero__core { position: absolute; left: 0; top: 0; width: 5%; aspect-ratio: 1; margin: -2.5% 0 0 -2.5%; border-radius: 50%;
+    background: radial-gradient(closest-side, #fff, rgba(255,240,215,0.85) 45%, transparent); will-change: transform, opacity; opacity: 0; }
+  .hero__sweep { position: absolute; top: -20%; bottom: -20%; left: 0; width: 18%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,0) 20%, rgba(255,246,230,0.55) 50%, rgba(255,255,255,0) 80%, transparent);
+    transform: translateX(-120%) skewX(-12deg); will-change: transform; }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__sweep { animation: sweep 7.5s var(--sc-ease-in-out) 1.2s infinite; }
+  }
+  @keyframes sweep { 0% { transform: translateX(260%) skewX(-12deg); } 38%, 100% { transform: translateX(560%) skewX(-12deg); } }
+  .hero__waves { inset: -10% -5%; opacity: 0.6;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 34%, transparent 58%); mask-image: linear-gradient(90deg, #000 0%, #000 34%, transparent 58%); }
+  .hero__floor { inset: auto 0 0 0; height: 16svh; background: linear-gradient(to top, var(--sc-canvas), transparent); z-index: 5; }
+
+  .hero__copy { position: absolute; z-index: var(--sc-z-copy); left: var(--sc-gutter); top: 53%; translate: 0 -50%; width: min(48rem, 52vw); }
+  .hero h1 { font-size: clamp(2.6rem, 0.6rem + 4vw, 5.4rem); line-height: 0.96; }
+  .hero__sub { margin-top: var(--sc-5); max-width: 30rem; font-size: var(--sc-t-lg); line-height: 1.42; color: var(--sc-ink-soft); }
+  .hero__actions { margin-top: var(--sc-6); display: flex; align-items: center; gap: var(--sc-5); flex-wrap: wrap; }
+  .hero__rating { margin-top: var(--sc-6); display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+  .hero__rating b { color: var(--sc-ink); font-weight: 600; }
+  .stars { color: var(--sc-accent); letter-spacing: 0.08em; }
+  .hero__beat { position: absolute; z-index: var(--sc-z-copy); left: var(--sc-gutter); top: 53%; translate: 0 -50%; width: min(36rem, 44vw); }
+  .hero__beat h2 { font-size: var(--sc-t-3xl); }
+  .hero__beat p { margin-top: var(--sc-5); font-size: var(--sc-t-lg); line-height: 1.45; color: var(--sc-ink-soft); max-width: 30rem; }
+
+  /* ------------------------------------------------------------- sinais -- */
+  .sinais { padding-block: clamp(5rem, 10vw, 9rem) clamp(4rem, 8vw, 7rem); overflow: clip; }
+  .sinais__intro { display: flex; justify-content: space-between; align-items: end; gap: var(--sc-6); flex-wrap: wrap; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+  .sinais__intro h2 { font-size: var(--sc-t-2xl); }
+  .sinais__intro p { max-width: 26rem; color: var(--sc-ink-soft); }
+  .sign { display: block; font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase;
+    font-size: clamp(2.3rem, 0.8rem + 6vw, 6.4rem); line-height: 1.02; letter-spacing: -0.012em;
+    padding-block: clamp(0.4rem, 1vw, 0.9rem); border-top: 1px solid var(--sc-hairline); }
+  .sign:last-child { border-bottom: 1px solid var(--sc-hairline); }
+  .sign span { display: inline-block; will-change: transform; }
+  .sign:nth-child(even) { text-align: right; }
+  .sign em { font-style: normal; color: var(--sc-accent); }
+  .sinais__out { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--sc-7); align-items: start; }
+  .sinais__out .big { font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-2xl); line-height: 1; }
+  .sinais__out p { color: var(--sc-ink-soft); font-size: var(--sc-t-lg); line-height: 1.5; }
+
+  /* --------------------------------------------------------------- rota -- */
+  .rota { background: var(--night); color: var(--night-ink); --sc-ink: var(--night-ink); --sc-ink-soft: var(--night-soft); --sc-accent: var(--night-accent); }
+  .rota__stage { background: radial-gradient(70% 60% at 68% 50%, #1E120C, var(--night) 70%); }
+  .rota__art { position: absolute; right: max(var(--sc-gutter), 4vw); top: calc(var(--bar-h) + 1svh); bottom: 2svh; aspect-ratio: 1600 / 2120; }
+  .rota__art svg { width: 100%; height: 100%; overflow: visible; }
+  .rota__label { font-family: var(--sc-font-text); font-size: 34px; font-weight: 500; letter-spacing: 0.06em; fill: var(--night-ink); text-transform: uppercase; }
+  .rota__panel { position: absolute; z-index: var(--sc-z-copy); left: var(--sc-gutter); top: 50%; translate: 0 -46%; width: min(31rem, 40vw); }
+  .rota__where { display: block; font-size: var(--sc-t-sm); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--night-accent); }
+  .rota__panel h2, .rota__panel h3 { margin-top: var(--sc-4); font-size: clamp(2rem, 1rem + 2.6vw, 3.6rem); }
+  .rota__panel p { margin-top: var(--sc-5); color: var(--night-soft); font-size: var(--sc-t-lg); line-height: 1.5; max-width: 30rem; }
+  .rota__panel ul { margin: var(--sc-5) 0 0; padding: 0; list-style: none; display: grid; gap: 0.55rem; }
+  .rota__panel li { position: relative; padding-left: 1.2rem; color: var(--night-ink); }
+  .rota__panel li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--night-accent); }
+  .rota__panel--intro h2 { font-size: var(--sc-t-4xl); }
+
+  /* ------------------------------------------------------------- exames -- */
+  .exames { padding-block: var(--sc-section); background: var(--sc-canvas); }
+  .exames__grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr); gap: clamp(2rem, 5vw, 5.5rem); align-items: start; }
+  .exames__aside { position: sticky; top: calc(var(--bar-h) + 2rem); }
+  .exames__aside h2 { font-size: var(--sc-t-3xl); }
+  .exames__aside > p { margin-top: var(--sc-5); color: var(--sc-ink-soft); max-width: 26rem; }
+  .filters { margin-top: var(--sc-7); display: grid; gap: var(--sc-5); }
+  .filter__name { font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sc-ink-soft); margin-bottom: var(--sc-2); }
+  .seg { display: inline-flex; flex-wrap: wrap; gap: 0.4rem; }
+  .seg button {
+    min-height: 2.6rem; padding: 0 1rem; border-radius: var(--sc-r-pill);
+    border: 1px solid color-mix(in oklab, var(--sc-ink) 18%, transparent); background: transparent;
+    font-size: var(--sc-t-sm); font-weight: 500; cursor: pointer;
+    transition: background-color var(--sc-d-fast) var(--sc-ease-out), border-color var(--sc-d-fast) var(--sc-ease-out), color var(--sc-d-fast) var(--sc-ease-out), transform 120ms var(--sc-ease-out);
+  }
+  .seg button:hover { border-color: var(--sc-ink); }
+  .seg button:active { transform: scale(0.97); }
+  .seg button[aria-pressed="true"] { background: var(--sc-ink); color: var(--sc-canvas); border-color: var(--sc-ink); }
+  .exames__count { margin-top: var(--sc-5); font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+  .list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sc-hairline-strong); }
+  .item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--sc-2) var(--sc-6); padding: var(--sc-5) 0; border-bottom: 1px solid var(--sc-hairline); align-items: start; }
+  .item[hidden] { display: none; }
+  .item h3 { font-family: var(--sc-font-display); font-weight: 500; font-size: var(--sc-t-xl); line-height: 1.12; letter-spacing: -0.005em; margin: 0; }
+  .item p { grid-column: 1; margin: 0; color: var(--sc-ink-soft); max-width: 46rem; }
+  .item__meta { grid-column: 1; display: flex; gap: var(--sc-4); flex-wrap: wrap; font-size: var(--sc-t-xs); letter-spacing: 0.04em; color: var(--sc-ink-soft); }
+  .item__meta b { font-weight: 600; color: var(--orange-deep); }
+  .item__go { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-size: var(--sc-t-sm); font-weight: 600; color: var(--orange-deep); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2.75rem; padding: 0 0.25rem; }
+  .item__go:hover { text-decoration: underline; }
+  .item__go svg { width: 1rem; height: 1rem; transition: transform var(--sc-d-fast) var(--sc-ease-out); }
+  .item__go:hover svg { transform: translateX(3px); }
+
+  /* --------------------------------------------------------------- dia -- */
+  .dia { background: var(--sc-surface); padding-block: clamp(4.5rem, 8vw, 8rem); }
+  .dia__top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--sc-6) var(--sc-8); align-items: end; }
+  .dia__top h2 { font-size: var(--sc-t-3xl); }
+  .dia__top p { margin-top: var(--sc-4); max-width: 28rem; color: var(--sc-ink-soft); font-size: var(--sc-t-lg); line-height: 1.5; }
+  .pick { justify-self: end; text-align: right; }
+  .pick__label { margin: 0 0 var(--sc-2); font-size: var(--sc-t-xs); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sc-ink-soft); margin-bottom: var(--sc-2); }
+  .pick .seg { justify-content: flex-end; }
+  .pick .seg button { min-height: 2.9rem; padding: 0 1.25rem; font-size: var(--sc-t-base); background: #FFFCF9; }
+  .pick .seg button[aria-pressed="true"] { background: var(--sc-ink); color: var(--sc-canvas); border-color: var(--sc-ink); }
+  .pick__label, .plan__step, .check__note, .dia__end p, .dia__top p { margin-bottom: 0; }
+  .pick__label, .plan__step { margin-top: 0; }
+
+  /* the track: four stops on a line, the brand light travels along it */
+  .track { position: relative; margin-top: clamp(2.5rem, 5vw, 4rem); --n: 4; --i: 0; }
+  .track__line { position: absolute; left: calc(100% / var(--n) / 2); right: calc(100% / var(--n) / 2); top: 1.9rem; height: 2px; background: color-mix(in oklab, var(--sc-ink) 12%, transparent); border-radius: 2px; }
+  .track__fill { position: absolute; inset: 0; background: linear-gradient(90deg, #F27515, var(--sc-accent)); transform-origin: 0 50%; transform: scaleX(calc(var(--i) / (var(--n) - 1))); transition: transform 520ms var(--sc-ease-out); border-radius: 2px; }
+  .track__light { position: absolute; top: 1.9rem; left: calc(100% / var(--n) / 2); width: 7rem; height: 7rem; margin: -3.5rem 0 0 -3.5rem; pointer-events: none; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(255,214,160,0.75), rgba(255,140,50,0.28) 45%, transparent);
+    transform: translateX(calc((100cqw - 100cqw / var(--n)) * var(--i) / (var(--n) - 1))); transition: transform 520ms var(--sc-ease-out); }
+  .track { container-type: inline-size; }
+  .stops { position: relative; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+  .stop { display: grid; justify-items: center; gap: var(--sc-3); padding: 0 0.25rem var(--sc-2); background: none; border: 0; cursor: pointer; color: var(--sc-ink); font: inherit; }
+  .stop__dot { position: relative; width: 3.8rem; height: 3.8rem; border-radius: 50%; display: grid; place-items: center; background: #FFFCF9; color: var(--sc-ink-soft);
+    box-shadow: var(--sc-e1), inset 0 0 0 1.5px color-mix(in oklab, var(--sc-ink) 14%, transparent);
+    transition: background-color 260ms var(--sc-ease-out), color 260ms var(--sc-ease-out), box-shadow 260ms var(--sc-ease-out), transform 160ms var(--sc-ease-out); }
+  .stop__dot svg { width: 1.5rem; height: 1.5rem; }
+  .stop__name { font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-lg); line-height: 1; color: var(--sc-ink-soft); transition: color 260ms var(--sc-ease-out); }
+  .stop.is-done .stop__dot { background: #FFE9D6; color: var(--orange-deep); box-shadow: var(--sc-e1), inset 0 0 0 1.5px rgba(226,89,11,0.35); }
+  .stop[aria-selected="true"] .stop__dot { background: radial-gradient(circle at 35% 30%, var(--orange-glow), var(--sc-accent) 60%, #C9480A); color: #fff; box-shadow: 0 6px 18px -4px rgba(201,72,10,0.55), var(--sc-e1); transform: scale(1.06); }
+  .stop[aria-selected="true"] .stop__name { color: var(--sc-ink); }
+  .stop:hover .stop__name { color: var(--sc-ink); }
+  .stop:active .stop__dot { transform: scale(0.97); }
+  .stop:focus-visible { outline: none; }
+  .stop:focus-visible .stop__dot { outline: 2px solid var(--sc-accent); outline-offset: 4px; }
+
+  /* the panel for the selected stop */
+  .plan { margin-top: clamp(1.5rem, 3vw, 2.25rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(1.5rem, 4vw, 4rem);
+    padding: clamp(1.5rem, 3vw, 2.75rem); border-radius: var(--sc-r-lg); background: #FFFCF9; box-shadow: var(--sc-e2), var(--sc-edge); }
+  .plan__step { font-size: var(--sc-t-sm); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-deep); }
+  .plan h3 { margin: var(--sc-3) 0 0; font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-2xl); line-height: 1; }
+  .plan__text { margin-top: var(--sc-4); color: var(--sc-ink-soft); font-size: var(--sc-t-lg); line-height: 1.5; max-width: 30rem; }
+  .plan__nav { margin-top: var(--sc-6); display: flex; gap: var(--sc-3); }
+  .plan__nav button { min-height: 2.75rem; padding: 0 1.1rem; border-radius: var(--sc-r-pill); border: 1px solid color-mix(in oklab, var(--sc-ink) 18%, transparent); background: transparent; font-weight: 600; font-size: var(--sc-t-sm); cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;
+    transition: border-color var(--sc-d-fast) var(--sc-ease-out), background-color var(--sc-d-fast) var(--sc-ease-out), transform 120ms var(--sc-ease-out); }
+  .plan__nav button:hover { border-color: var(--sc-ink); }
+  .plan__nav button:active { transform: scale(0.97); }
+  .plan__nav button[disabled] { opacity: 0.35; cursor: default; }
+  .plan__nav svg { width: 1rem; height: 1rem; }
+  .plan__nav .prev svg { transform: scaleX(-1); }
+  .plan__nav .next { background: var(--orange-btn); border-color: var(--orange-btn); color: #fff; }
+  .plan__nav .next:hover { background: var(--orange-deep); border-color: var(--orange-deep); }
+  .check__head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--sc-4); }
+  .check__title { font-weight: 600; }
+  .check__count { font-size: var(--sc-t-sm); color: var(--sc-ink-soft); font-variant-numeric: tabular-nums; }
+  .check__bar { margin-top: var(--sc-3); height: 6px; border-radius: 6px; background: color-mix(in oklab, var(--sc-ink) 8%, transparent); overflow: hidden; }
+  .check__bar i { display: block; height: 100%; background: linear-gradient(90deg, #F27515, var(--sc-accent)); transform-origin: 0 50%; transform: scaleX(0); transition: transform 360ms var(--sc-ease-out); }
+  .check ul { list-style: none; margin: var(--sc-5) 0 0; padding: 0; display: grid; gap: var(--sc-2); }
+  .check label { display: flex; gap: var(--sc-4); align-items: flex-start; padding: 0.85rem 1rem; border-radius: var(--sc-r-md); cursor: pointer; background: color-mix(in oklab, var(--sc-surface) 55%, #fff);
+    transition: background-color var(--sc-d-fast) var(--sc-ease-out); }
+  .check label:hover { background: var(--sc-surface); }
+  .check input { appearance: none; flex: none; width: 1.4rem; height: 1.4rem; margin: 0.05rem 0 0; border-radius: 6px; border: 1.5px solid color-mix(in oklab, var(--sc-ink) 30%, transparent); background: #fff; display: grid; place-items: center; cursor: pointer;
+    transition: background-color 160ms var(--sc-ease-out), border-color 160ms var(--sc-ease-out); }
+  .check input::after { content: ""; width: 0.42rem; height: 0.75rem; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: translateY(-1px) rotate(45deg) scale(0); transition: transform 160ms var(--sc-ease-out); }
+  .check input:checked { background: var(--orange-btn); border-color: var(--orange-btn); }
+  .check input:checked::after { transform: translateY(-1px) rotate(45deg) scale(1); }
+  .check input:checked + span { color: var(--sc-ink-soft); text-decoration: line-through; text-decoration-color: rgba(181,68,10,0.5); }
+  .check__note { margin-top: var(--sc-4); font-size: var(--sc-t-xs); color: var(--sc-ink-soft); }
+  .plan.is-swapping > * { opacity: 0; transform: translateY(6px); }
+  .plan > * { transition: opacity 240ms var(--sc-ease-out), transform 240ms var(--sc-ease-out); }
+  .dia__end { margin-top: clamp(2rem, 4vw, 3rem); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sc-4) var(--sc-6); }
+  .dia__end p { font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-xl); line-height: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    .track__fill, .track__light, .plan > * { transition: none; }
+  }
+
+  /* --------------------------------------------------------- prevencao -- */
+  .prev { position: relative; background: var(--sc-canvas); padding-block: clamp(3rem, 6vw, 5rem); }
+  .prev__frame { position: relative; margin-inline: var(--sc-gutter); border-radius: var(--sc-r-lg); overflow: hidden; aspect-ratio: 2000 / 1131; box-shadow: var(--sc-e3); }
+  .prev__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .prev__mask { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(251,246,241,0.94) 0%, rgba(251,246,241,0.82) 30%, rgba(251,246,241,0) 52%); }
+  .prev__copy { position: absolute; z-index: 2; left: clamp(1.5rem, 4vw, 4rem); top: 50%; translate: 0 -50%; width: min(34rem, 42%); }
+  .prev__copy h2 { font-size: clamp(2.2rem, 1rem + 3.4vw, 4.6rem); }
+  .prev__copy p { margin-top: var(--sc-5); color: var(--sc-ink); font-size: var(--sc-t-lg); line-height: 1.5; }
+  .prev__copy .kicker { margin-top: var(--sc-5); font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-xl); color: var(--orange-deep); line-height: 1.05; }
+
+  /* --------------------------------------------------------------- fim -- */
+  .fim { background: var(--sc-canvas); }
+  .fim__stage { display: grid; grid-template-rows: 1fr auto; }
+  .fim__main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding: calc(var(--bar-h) + 2rem) var(--sc-gutter) 2rem; max-width: var(--sc-maxw); margin-inline: auto; width: 100%; }
+  .fim h2 { font-size: clamp(3rem, 1rem + 6vw, 7.5rem); line-height: 0.92; }
+  .fim__lede { margin-top: var(--sc-5); font-size: var(--sc-t-lg); color: var(--sc-ink-soft); max-width: 30rem; line-height: 1.5; }
+  .fim__cta { margin-top: var(--sc-6); display: flex; flex-wrap: wrap; gap: var(--sc-5); align-items: center; }
+  .fim__phone { font-weight: 600; font-size: var(--sc-t-lg); text-decoration: none; }
+  .fim__phone:hover { text-decoration: underline; }
+  .place { position: relative; padding: clamp(1.5rem, 3vw, 2.5rem); border-radius: var(--sc-r-lg); background: #FFFCF9; box-shadow: var(--sc-e3), var(--sc-edge); }
+  .place__pin { position: absolute; top: -1.6rem; left: clamp(1.5rem, 3vw, 2.5rem); width: 3.2rem; height: 3.2rem; border-radius: 50%; background: radial-gradient(circle at 38% 32%, #fff 0 12%, var(--orange-glow) 30%, var(--sc-accent) 62%, #C9480A); box-shadow: 0 0 0 8px rgba(226,89,11,0.12), var(--sc-e2); }
+  .place h3 { margin-top: var(--sc-4); font-family: var(--sc-font-display); font-weight: 600; text-transform: uppercase; font-size: var(--sc-t-xl); line-height: 1.05; }
+  .place address { font-style: normal; margin-top: var(--sc-3); font-size: var(--sc-t-lg); line-height: 1.45; }
+  .place__rows { margin-top: var(--sc-5); display: grid; gap: var(--sc-3); padding-top: var(--sc-5); border-top: 1px solid var(--sc-hairline); font-size: var(--sc-t-sm); color: var(--sc-ink-soft); }
+  .place__rows a { color: var(--sc-ink); font-weight: 500; }
+
+  /* live map card */
+  .place--map { padding: 0; overflow: hidden; }
+  .place--map .place__pin { display: none; }
+  .map { position: relative; height: clamp(260px, 50svh, 540px); isolation: isolate;
+    background:
+      repeating-linear-gradient(28deg, transparent 0 46px, rgba(255,255,255,0.9) 46px 52px),
+      repeating-linear-gradient(-62deg, transparent 0 70px, rgba(255,255,255,0.9) 70px 75px),
+      #F1E8DE; }
+  .map__fallback { position: absolute; left: 50%; top: 50%; width: 1.6rem; height: 1.6rem; margin: -0.8rem 0 0 -0.8rem; border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%, #fff 0 14%, var(--orange-glow) 32%, var(--sc-accent) 64%, #C9480A); box-shadow: 0 0 0 10px rgba(226,89,11,0.14); }
+  .map.is-ready .map__fallback, .map.is-static .map__fallback { display: none; }
+  .map.is-static { background: #F1E8DE url(assets/map-static-d.webp) center / cover no-repeat; }
+  @media (max-width: 860px) { .map.is-static { background-image: url(assets/map-static-m.webp); } }
+  .map .maplibregl-canvas:focus-visible { outline: 2px solid var(--sc-accent); outline-offset: -2px; }
+  .map .maplibregl-ctrl-group { border-radius: 12px; box-shadow: var(--sc-e2); }
+  .map .maplibregl-ctrl-attrib { font-size: 10px; }
+  .map-pin { position: relative; width: 22px; height: 22px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 32%, #fff 0 16%, var(--orange-glow) 34%, var(--sc-accent) 66%, #C9480A);
+    box-shadow: 0 4px 10px rgba(150,50,0,0.35), 0 0 0 6px rgba(226,89,11,0.18); }
+  .map-pin::before, .map-pin::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(226,89,11,0.55); opacity: 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .map-pin::before { animation: pinPulse 2.4s var(--sc-ease-out) infinite; }
+    .map-pin::after { animation: pinPulse 2.4s var(--sc-ease-out) 1.2s infinite; }
+  }
+  @keyframes pinPulse { 0% { transform: scale(0.6); opacity: 0.9; } 100% { transform: scale(3.2); opacity: 0; } }
+  .map-pin__tag { position: absolute; left: 50%; bottom: calc(100% + 10px); translate: -50% 0; white-space: nowrap; padding: 0.35rem 0.7rem; border-radius: 999px;
+    background: var(--sc-ink); color: #fff; font: 600 12px/1 var(--sc-font-text); letter-spacing: 0.04em; box-shadow: var(--sc-e2); }
+  .map-pin__tag::after { content: ""; position: absolute; left: 50%; top: 100%; margin-left: -5px; border: 5px solid transparent; border-top-color: var(--sc-ink); }
+  .place__info { padding: clamp(1.1rem, 2vw, 1.6rem) clamp(1.25rem, 2.4vw, 1.9rem) clamp(1.2rem, 2vw, 1.6rem); }
+  .place__head { display: flex; justify-content: space-between; align-items: center; gap: var(--sc-4); }
+  .place--map h3 { margin: 0; }
+  .place--map address { margin-top: var(--sc-2); font-size: var(--sc-t-base); }
+  .place__go { margin-top: var(--sc-4); display: flex; flex-wrap: wrap; gap: var(--sc-2); }
+  .chip { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 2.6rem; padding: 0 1rem; border-radius: 999px; border: 1px solid color-mix(in oklab, var(--sc-ink) 18%, transparent);
+    font-size: var(--sc-t-sm); font-weight: 600; text-decoration: none; color: var(--sc-ink); background: #fff;
+    transition: border-color var(--sc-d-fast) var(--sc-ease-out), transform 120ms var(--sc-ease-out); }
+  .chip:hover { border-color: var(--sc-ink); }
+  .chip:active { transform: scale(0.97); }
+  .chip svg { width: 1rem; height: 1rem; }
+  .chip[hidden] { display: none; }
+  .chip--reset { font: inherit; font-size: var(--sc-t-xs); min-height: 2.2rem; padding: 0 0.85rem; cursor: pointer; }
+  .place--map .place__rows { margin-top: var(--sc-4); padding-top: var(--sc-4); display: flex; flex-wrap: wrap; gap: var(--sc-1) var(--sc-4); font-size: var(--sc-t-xs); }
+  .foot { background: var(--orange-deep); color: #fff; padding: var(--sc-5) var(--sc-gutter); display: flex; flex-wrap: wrap; gap: var(--sc-3) var(--sc-7); align-items: center; justify-content: space-between; font-size: var(--sc-t-xs); line-height: 1.5; }
+  .foot .brand__sub { border-color: #fff; }
+  .foot p { margin: 0; max-width: 54rem; }
+
+  .hidden-wave { display: none; }
+
+  /* ------------------------------------------------------------ mobile -- */
+  @media (max-width: 860px) {
+    :root { --bar-h: 3.75rem; }
+    .bar__nav a:not(.btn) { display: none; }
+    .bar .btn { min-height: 2.5rem; padding: 0 1rem; }
+    .brand__icons svg { width: 1.8rem; height: 1.8rem; }
+    .brand__word { font-size: 1.5rem; }
+    .brand__sub { display: none; }
+
+    .hero h1 { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+    .hero__sub { margin-top: var(--sc-4); font-size: var(--sc-t-base); }
+    .hero__actions { margin-top: var(--sc-5); }
+    .hero__rating { margin-top: var(--sc-4); }
+    .hero__beat h2 { font-size: var(--sc-t-2xl); }
+
+    .sign:nth-child(even) { text-align: left; }
+    .sinais__out { grid-template-columns: 1fr; gap: var(--sc-5); }
+
+    .rota__art { left: 50%; right: auto; translate: -50% 0; top: calc(var(--bar-h) + 1svh); bottom: auto; height: 50svh; }
+    .rota__panel { top: auto; bottom: max(1.25rem, 3svh); translate: none; width: auto; right: var(--sc-gutter); }
+    .rota__panel h2, .rota__panel h3 { font-size: var(--sc-t-2xl); margin-top: var(--sc-2); }
+    .rota__panel--intro h2 { font-size: var(--sc-t-3xl); }
+    .rota__panel p { margin-top: var(--sc-3); font-size: var(--sc-t-base); }
+    .rota__panel ul { margin-top: var(--sc-3); gap: 0.3rem; font-size: var(--sc-t-sm); }
+    .rota__scrim { position: absolute; inset: auto 0 0 0; height: 52svh; background: linear-gradient(to top, var(--night) 62%, transparent); z-index: 4; pointer-events: none; }
+
+    .exames__grid { grid-template-columns: 1fr; }
+    .exames__aside { position: static; }
+    .item { grid-template-columns: 1fr; }
+    .item__go { grid-column: 1; grid-row: auto; justify-self: start; }
+
+    .dia__top { grid-template-columns: 1fr; }
+    .pick { justify-self: start; text-align: left; }
+    .pick .seg { justify-content: flex-start; }
+    .stop__dot { width: 3rem; height: 3rem; }
+    .stop__dot svg { width: 1.25rem; height: 1.25rem; }
+    .stop__name { font-size: var(--sc-t-sm); }
+    .track__line, .track__light { top: 1.5rem; }
+    .track__light { width: 5rem; height: 5rem; margin: -2.5rem 0 0 -2.5rem; }
+    .plan { grid-template-columns: 1fr; padding: 1.4rem 1.1rem; }
+    .plan__text { font-size: var(--sc-t-base); }
+    .check label { padding: 0.75rem 0.8rem; }
+
+    .prev__frame { aspect-ratio: auto; display: flex; flex-direction: column; border-radius: var(--sc-r-md); }
+    .prev__frame picture, .prev__frame img { position: relative; inset: auto; aspect-ratio: 900 / 1000; }
+    .prev__mask { display: none; }
+    .prev__copy { position: relative; left: auto; top: auto; translate: none; width: auto; padding: var(--sc-6) var(--sc-5) var(--sc-7); background: #FFFCF9; }
+
+    .fim__main { grid-template-columns: 1fr; gap: var(--sc-8); padding-top: calc(var(--bar-h) + 1.5rem); align-content: center; }
+    .fim__main { gap: var(--sc-6); padding-top: calc(var(--bar-h) + 1rem); padding-bottom: 1rem; }
+    .fim h2 { font-size: clamp(2.3rem, 11vw, 3.4rem); }
+    .fim__lede { margin-top: var(--sc-3); font-size: var(--sc-t-sm); }
+    .fim__cta { margin-top: var(--sc-4); gap: var(--sc-3) var(--sc-5); }
+    .fim .btn--lg { min-height: 3.1rem; padding: 0 1.4rem; }
+    .place { padding: 1.4rem 1.25rem 1.1rem; }
+    .place__pin { width: 2.5rem; height: 2.5rem; top: -1.25rem; left: 1.25rem; }
+    .place h3 { margin-top: var(--sc-2); font-size: var(--sc-t-lg); }
+    .place address { font-size: var(--sc-t-base); margin-top: var(--sc-2); }
+    .place__rows { margin-top: var(--sc-3); padding-top: var(--sc-3); gap: var(--sc-1); font-size: var(--sc-t-xs); }
+    .place--map { padding: 0; }
+    .map { height: 25svh; min-height: 170px; }
+    .place__info { padding: 0.9rem 1rem 1rem; }
+    .place--map .place__rows { display: none; }
+    .chip { min-height: 2.4rem; padding: 0 0.85rem; }
+    .foot { padding: 0.8rem var(--sc-gutter); }
+    .foot .brand { display: none; }
+    .foot p { font-size: 0.68rem; }
+  }
+  @media (min-width: 861px) { .rota__scrim { display: none; } }
+  @media (max-width: 860px) and (max-height: 720px) {
+    .hero__art { top: calc(var(--bar-h) - 6svh); }
+    .hero h1 { font-size: 2.2rem; }
+    .hero__sub { font-size: var(--sc-t-sm); }
+    .rota__art { height: 44svh; }
+    .rota__panel p { font-size: var(--sc-t-sm); }
+  }
+  @media (max-width: 380px) { .hero__rating { display: none; } }
+  /* Phones AND tall desktop windows get the portrait plate: art above, copy below. */
+  @media (max-width: 860px), (max-aspect-ratio: 13/10) {
+    .hero__art { --ar: 0.5624; --w: min(max(100%, calc(100svh * var(--ar))), 76svh); aspect-ratio: 1500 / 2667; left: 50%; translate: -50% 0;
+      top: calc(var(--bar-h) - 2svh); margin-top: 0; transform-origin: 50% 25%;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 7%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 7%); mask-composite: intersect; }
+    .hero__glass { -webkit-mask-image: url(assets/hero-b-mask-m.png); mask-image: url(assets/hero-b-mask-m.png); }
+    .hero__waves { -webkit-mask-image: linear-gradient(to top, #000 0%, #000 30%, transparent 55%); mask-image: linear-gradient(to top, #000 0%, #000 30%, transparent 55%); }
+    .hero__floor { height: 50svh; background: linear-gradient(to top, var(--sc-canvas) 40%, transparent); }
+    .hero__copy, .hero__beat { top: auto; bottom: max(1.5rem, 5svh); translate: none; width: auto; max-width: 40rem; right: var(--sc-gutter); }
+  }
+  @media (prefers-reduced-motion: reduce) { .hero__plane { transform: none !important; } }
+</style>
+</head>
+<body>
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="icoClip"><circle cx="50" cy="50" r="48"/></clipPath>
+    <radialGradient id="ballGrad" cx="36%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#FFA63C"/><stop offset="0.5" stop-color="#F27515"/><stop offset="1" stop-color="#DD560B"/>
+    </radialGradient>
+  </defs>
+  <symbol id="ico-stomach" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="url(#ballGrad)"/>
+    <path clip-path="url(#icoClip)" fill="#fff" d="M45.6 -3 L45.6 24.7 L46.4 28.5 C46.8 29.8 46.9 31.3 48.3 32.3 C49.7 33.3 52.2 34.2 55 34.6 C57.8 35.0 61.6 34.5 65 34.8 C68.4 35.1 73.0 35.3 75.2 36.2 C77.4 37.1 77.6 38.7 78.4 40 C79.2 41.3 79.8 42.6 80.1 43.9 C80.4 45.2 80.4 46.4 80.5 47.7 C80.6 49.0 80.7 50.2 80.5 51.5 C80.3 52.8 80.0 54.1 79.6 55.4 C79.2 56.7 78.8 57.9 78.2 59.2 C77.6 60.5 76.9 61.8 76.1 63.1 C75.3 64.4 74.4 65.6 73.2 66.9 C72.0 68.2 70.8 69.4 68.8 70.7 C66.8 72.0 64.3 73.5 61.5 74.6 C58.7 75.6 55.2 76.6 52 77 C48.8 77.4 44.9 77.2 42 76.8 C39.1 76.4 36.6 75.3 34.6 74.6 C32.6 73.9 31.4 72.6 30 72.6 C28.6 72.6 27.2 73.6 26 74.6 C24.8 75.6 23.5 77.1 22.9 78.4 C22.3 79.7 22.7 81.0 22.6 82.3 L22.5 86 L22.5 94 L14 94 L15.5 84 C16.0 81.4 16.6 80.0 16.8 78.4 C17.1 76.8 16.7 75.9 17 74.6 C17.3 73.3 17.3 72.0 18.7 70.7 C20.1 69.4 23.0 67.9 25.2 66.9 C27.4 65.9 29.9 65.4 32 64.8 C34.1 64.2 36.2 64.0 37.7 63.1 C39.2 62.2 39.9 60.5 40.8 59.2 C41.7 57.9 42.5 56.7 43.1 55.4 C43.7 54.1 44.0 52.8 44.4 51.5 C44.8 50.2 45.1 49.0 45.2 47.7 C45.3 46.4 45.4 45.2 45.2 43.9 C45.0 42.6 44.8 41.3 44.2 40 C43.6 38.7 42.2 37.5 41.4 36.2 C40.6 34.9 40.0 33.6 39.6 32.3 C39.2 31.0 39.2 29.8 39.1 28.5 L38.9 24.7 L38.9 -3 L45.6 -3 Z"/>
+  </symbol>
+  <symbol id="ico-gut" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="url(#ballGrad)"/>
+    <path d="M50 12 V23 H35 C27 23 27 36.5 35 36.5 H65 C73 36.5 73 50 65 50 H35 C27 50 27 63.5 35 63.5 H64 C72 63.5 72 77 64 77 H51 V89" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.1-1.3-.6-.5-1-1.2-1.3-1.8-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.2s1 2.6 1.1 2.8c.1.2 2 3 4.8 4.2 1.8.7 2.4.8 3.3.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="bar" id="bar">
+  <a class="brand" href="#top" aria-label="CEG, Clínica de Endoscopia do Guarujá, início">
+    <span class="brand__icons" aria-hidden="true"><svg><use href="#ico-stomach"/></svg><svg><use href="#ico-gut"/></svg></span>
+    <span class="brand__type" aria-hidden="true"><span class="brand__word">CEG</span><span class="brand__sub">Clínica de Endoscopia do Guarujá</span></span>
+  </a>
+  <nav class="bar__nav" aria-label="Principal">
+    <a href="#exames">Exames</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#onde">Onde estamos</a>
+    <a class="btn" href="https://wa.me/5513991763785?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar exame</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 1 · HERO. The glass stomach plate, the wave ground in front of it, and a
+       light travelling inside the glass along the route an endoscope takes. -->
+  <section class="hero" data-sc-act="pin" data-sc-span="1.75" id="hero">
+    <div data-sc-stage class="hero__stage">
+      <div class="hero__plane hero__art" data-depth="0.5" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 860px), (max-aspect-ratio: 13/10)" srcset="assets/hero-b-m.webp">
+          <img class="hero__plate" src="assets/hero-b-d.webp" width="2400" height="1340" alt="" fetchpriority="high">
+        </picture>
+        <div class="hero__glass">
+          <span class="hero__sweep"></span>
+          <span class="hero__glow" id="heroGlow"></span>
+          <span class="hero__core" id="heroCore"></span>
+        </div>
+      </div>
+      <svg class="hero__plane hero__waves" data-depth="0.9" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="#E2590B" stroke-opacity="0.16" stroke-width="1.4">
+          <path d="M-50 640 C 250 560 420 760 760 660 S 1260 520 1650 620"/>
+          <path d="M-50 690 C 250 610 440 800 780 705 S 1270 575 1650 670"/>
+          <path d="M-50 740 C 260 660 460 840 800 750 S 1280 630 1650 720"/>
+          <path d="M-50 790 C 270 710 480 880 820 795 S 1290 685 1650 770"/>
+          <path d="M-50 160 C 300 230 520 70 860 150 S 1320 260 1650 170"/>
+          <path d="M-50 210 C 300 280 540 120 880 200 S 1330 310 1650 220"/>
+        </g>
+      </svg>
+      <div class="hero__plane hero__floor" aria-hidden="true"></div>
+
+      <div class="hero__copy" data-sc-cue="0 0.56 0 0.16">
+        <h1 class="sc-display">Ver <span class="hl">por dentro.</span><br>Cuidar por inteiro.</h1>
+        <p class="hero__sub">Endoscopia e colonoscopia no Guarujá. Uma clínica dedicada só a exames, do pedido médico ao laudo.</p>
+        <div class="hero__actions">
+          <a class="btn btn--lg" href="https://wa.me/5513991763785?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar exame</a>
+          <a class="link" href="#exames">Ver os exames</a>
+        </div>
+        <p class="hero__rating"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4,8</b> no Google · 16 avaliações</span></p>
+      </div>
+      <div class="hero__beat" data-sc-cue="0.58 1 0.14 0.12" aria-hidden="true">
+        <h2 class="sc-display">Aqui não tem consulta.<br><span class="hl">Tem exame bem feito.</span></h2>
+        <p>Você chega com o pedido do seu médico. A gente cuida do exame, com técnica, segurança e atenção a cada detalhe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · SINAIS. Flow. Type at scale, each line leaning with the scroll. -->
+  <section class="sinais" data-sc-act="flow" aria-labelledby="sinais-t">
+    <div class="sc-wrap">
+      <div class="sinais__intro" data-sc-in>
+        <h2 class="sc-display" id="sinais-t">Seu corpo avisa.</h2>
+        <p>Sinais que aparecem nos consultórios todos os dias, e que costumam ser ignorados por tempo demais.</p>
+      </div>
+      <div class="signs" data-sc-in data-sc-stagger="60">
+        <p class="sign"><span data-lean="1">Azia <em>todos os dias</em></span></p>
+        <p class="sign"><span data-lean="-1">Refluxo que não passa</span></p>
+        <p class="sign"><span data-lean="1">Dor no estômago <em>frequente</em></span></p>
+        <p class="sign"><span data-lean="-1"><em>Sangue</em> nas fezes</span></p>
+        <p class="sign"><span data-lean="1">Intestino que mudou</span></p>
+        <p class="sign"><span data-lean="-1">Perda de peso <em>sem explicação</em></span></p>
+      </div>
+      <div class="sinais__out" data-sc-in data-sc-stagger="70">
+        <p class="big">Nada disso deve ser <span class="hl">considerado normal.</span></p>
+        <p>Converse com seu médico. Ele indica o exame certo, e a CEG realiza com precisão. Para entender o que cada exame enxerga, role e acompanhe a luz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · ROTA (the peak). The scroll is the endoscope. A pinned dark chapter:
+       the glass tract sits almost invisible, a light enters from the top, then
+       from below, and every region it reaches names the exam that sees it. -->
+  <section class="rota" id="rota" data-sc-act="pin" data-sc-span="3.4" aria-labelledby="rota-t">
+    <div data-sc-stage class="rota__stage">
+      <div class="rota__art" aria-hidden="true">
+        <svg viewBox="0 -120 1600 2120" id="rotaSvg">
+          <defs>
+            <radialGradient id="lightMask"><stop offset="0" stop-color="#fff"/><stop offset="0.45" stop-color="#fff" stop-opacity="0.75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="lightGlow"><stop offset="0" stop-color="#fff"/><stop offset="0.12" stop-color="#FFE3C4"/><stop offset="0.35" stop-color="#FF8A45" stop-opacity="0.55"/><stop offset="1" stop-color="#FF7A2E" stop-opacity="0"/></radialGradient>
+            <mask id="seen" maskUnits="userSpaceOnUse" x="0" y="-120" width="1600" height="2120">
+              <rect x="0" y="-120" width="1600" height="2120" fill="#000"/>
+              <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+                <use href="#pathU" class="mk" stroke-width="250" stroke-opacity="0.12"/>
+                <use href="#pathU" class="mk" stroke-width="190" stroke-opacity="0.22"/>
+                <use href="#pathU" class="mk" stroke-width="110" stroke-opacity="0.3"/>
+                <use href="#pathL" class="mkL" stroke-width="250" stroke-opacity="0.12"/>
+                <use href="#pathL" class="mkL" stroke-width="190" stroke-opacity="0.22"/>
+                <use href="#pathL" class="mkL" stroke-width="110" stroke-opacity="0.3"/>
+              </g>
+              <circle id="maskLight" cx="782" cy="20" r="330" fill="url(#lightMask)"/>
+            </mask>
+            <path id="pathU" d="M782 -60 C782 40 783 130 792 200 C802 262 830 300 872 324 C910 346 960 352 1020 376 C1104 410 1142 500 1112 594 C1080 684 980 724 872 708 C796 696 744 660 702 630 C654 598 596 606 578 664 C564 716 596 758 640 776"/>
+            <path id="pathL" d="M830 1898 C834 1822 878 1762 862 1694 C846 1624 784 1596 800 1534 C816 1484 900 1472 984 1470 C1094 1468 1172 1438 1186 1338 C1202 1178 1196 1000 1172 872 C1158 820 1098 816 1000 830 C850 852 650 842 520 826 C462 820 436 852 436 920 C432 1050 432 1200 446 1310 C452 1360 470 1390 492 1396"/>
+          </defs>
+          <image href="assets/organs.webp" x="0" y="0" width="1600" height="2000" opacity="0.07" id="baseImg"/>
+          <image href="assets/organs.webp" x="0" y="0" width="1600" height="2000" mask="url(#seen)"/>
+          <g fill="none" stroke="#FFD2AE" stroke-width="5" stroke-linecap="round" opacity="0.85">
+            <use href="#pathU" id="traceU"/>
+          </g>
+          <g fill="none" stroke="#FFD2AE" stroke-width="5" stroke-linecap="round" opacity="0.85">
+            <use href="#pathL" id="traceL"/>
+          </g>
+          <g id="labels">
+            <text class="rota__label" x="560" y="180" data-at="u" data-t="0.1" text-anchor="end">Esôfago</text>
+            <text class="rota__label" x="1190" y="420" data-at="u" data-t="0.45">Estômago</text>
+            <text class="rota__label" x="1260" y="1150" data-at="l" data-t="0.4">Intestino</text>
+            <text class="rota__label" x="740" y="1700" data-at="l" data-t="0.04" text-anchor="end">Reto</text>
+          </g>
+          <circle id="glow" cx="782" cy="20" r="150" fill="url(#lightGlow)" style="mix-blend-mode: screen"/>
+        </svg>
+      </div>
+      <div class="rota__scrim" aria-hidden="true"></div>
+
+      <div class="rota__panel rota__panel--intro" data-sc-cue="0 0.12 0 0.03">
+        <h2 class="sc-display" id="rota-t">Agora,<br><span class="hl">por dentro.</span></h2>
+        <p>Siga a luz: ela faz o caminho de cada exame.</p>
+      </div>
+      <div class="rota__panel" data-sc-cue="0.1 0.46 0.04 0.04">
+        <span class="rota__where">Pela boca</span>
+        <h3 class="sc-display">Endoscopia digestiva alta</h3>
+        <p>Uma câmera fina e flexível mostra esôfago, estômago e duodeno em tempo real.</p>
+        <ul><li>Biópsia e pesquisa de <i>H. pylori</i></li><li>Retirada de pólipos e controle de sangramento</li></ul>
+      </div>
+      <div class="rota__panel" data-sc-cue="0.45 0.84 0.04 0.04">
+        <span class="rota__where">Por baixo</span>
+        <h3 class="sc-display">Colonoscopia</h3>
+        <p>Percorre todo o intestino grosso e encontra pólipos antes que virem um problema.</p>
+        <ul><li>Retossigmoidoscopia e anuscopia</li><li>Biópsia e retirada de pólipos</li></ul>
+      </div>
+      <div class="rota__panel" data-sc-cue="0.83 1 0.04 0.04">
+        <h3 class="sc-display">Dois caminhos.<br><span class="hl">Um olhar completo.</span></h3>
+        <p>Do esôfago ao fim do intestino, com os exames da CEG.</p>
+      </div>
+  </section>
+
+  <!-- 4 · EXAMES. Flow. A dense index with filters; the choice travels into WhatsApp. -->
+  <section class="exames" id="exames" data-sc-act="flow" aria-labelledby="exames-t">
+    <div class="sc-wrap exames__grid">
+      <div class="exames__aside" data-sc-in data-sc-stagger="60">
+        <h2 class="sc-display" id="exames-t">Todos os <span class="hl">exames</span></h2>
+        <p>Dezesseis procedimentos, do diagnóstico ao tratamento endoscópico. Escolha um e ele já segue na sua mensagem de agendamento.</p>
+        <div class="filters">
+          <div>
+            <p class="filter__name" id="f-tipo">Tipo</p>
+            <div class="seg" role="group" aria-labelledby="f-tipo" data-filter="tipo">
+              <button type="button" aria-pressed="true" data-v="">Todos</button>
+              <button type="button" aria-pressed="false" data-v="diag">Diagnóstico</button>
+              <button type="button" aria-pressed="false" data-v="trat">Tratamento</button>
+            </div>
+          </div>
+          <div>
+            <p class="filter__name" id="f-via">Caminho</p>
+            <div class="seg" role="group" aria-labelledby="f-via" data-filter="via">
+              <button type="button" aria-pressed="true" data-v="">Todos</button>
+              <button type="button" aria-pressed="false" data-v="alta">Pela boca</button>
+              <button type="button" aria-pressed="false" data-v="baixa">Por baixo</button>
+            </div>
+          </div>
+        </div>
+        <p class="exames__count" aria-live="polite" id="count">Mostrando 16 exames</p>
+      </div>
+
+      <ul class="list" id="list">
+        <li class="item" data-tipo="diag" data-via="alta"><h3>Endoscopia digestiva alta</h3><p>Avalia esôfago, estômago e duodeno com câmera flexível introduzida pela boca.</p><div class="item__meta"><b>Pela boca</b><span>TUSS 40201120</span></div></li>
+        <li class="item" data-tipo="diag" data-via="alta"><h3>Endoscopia digestiva alta com biópsia e/ou citologia</h3><p>Durante o exame, pequenos fragmentos são retirados para análise em laboratório.</p><div class="item__meta"><b>Pela boca</b><span>TUSS 40202038</span></div></li>
+        <li class="item" data-tipo="diag" data-via="alta"><h3>Endoscopia digestiva alta com biópsia e teste de urease</h3><p>Pesquisa da bactéria <i>Helicobacter pylori</i>, ligada à gastrite e à úlcera.</p><div class="item__meta"><b>Pela boca</b><span>TUSS 40202615</span></div></li>
+        <li class="item" data-tipo="diag" data-via="alta"><h3>Vídeo-faringo-laringoscopia com endoscópio flexível</h3><p>Avalia garganta, faringe e laringe, incluindo as cordas vocais.</p><div class="item__meta"><b>Pelo nariz ou boca</b><span>TUSS 40201252</span></div></li>
+        <li class="item" data-tipo="diag" data-via="baixa"><h3>Colonoscopia</h3><p>Avalia todo o intestino grosso. Inclui a retossigmoidoscopia.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40201082</span></div></li>
+        <li class="item" data-tipo="diag" data-via="baixa"><h3>Colonoscopia com biópsia e/ou citologia</h3><p>Colonoscopia com retirada de fragmentos para análise.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40202666</span></div></li>
+        <li class="item" data-tipo="diag" data-via="baixa"><h3>Retossigmoidoscopia flexível</h3><p>Avalia o reto e o cólon sigmoide, a parte final do intestino.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40201171</span></div></li>
+        <li class="item" data-tipo="diag" data-via="baixa"><h3>Retossigmoidoscopia flexível com biópsia e/ou citologia</h3><p>Retossigmoidoscopia com retirada de fragmentos para análise.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40202690</span></div></li>
+        <li class="item" data-tipo="diag" data-via="baixa"><h3>Anuscopia (interna e externa)</h3><p>Avaliação do canal anal.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40201023</span></div></li>
+        <li class="item" data-tipo="trat" data-via="alta"><h3>Polipectomia do esôfago, estômago ou duodeno</h3><p>Retirada de pólipos durante a endoscopia, independente do número de pólipos.</p><div class="item__meta"><b>Pela boca</b><span>TUSS 40202550</span></div></li>
+        <li class="item" data-tipo="trat" data-via="alta"><h3>Hemostasia mecânica do esôfago, estômago ou duodeno</h3><p>Controle de sangramento por via endoscópica.</p><div class="item__meta"><b>Pela boca</b><span>TUSS 40202291</span></div></li>
+        <li class="item" data-tipo="trat" data-via="alta baixa"><h3>Mucosectomia</h3><p>Retirada endoscópica de lesões da mucosa, a camada interna do tubo digestivo.</p><div class="item__meta"><b>Pela boca ou por baixo</b><span>TUSS 40202470</span></div></li>
+        <li class="item" data-tipo="trat" data-via="alta baixa"><h3>Injeção de substância medicamentosa</h3><p>Aplicação de medicamento por via endoscópica, como no controle de sangramentos.</p><div class="item__meta"><b>Pela boca ou por baixo</b><span>TUSS 40202330</span></div></li>
+        <li class="item" data-tipo="trat" data-via="baixa"><h3>Polipectomia de cólon</h3><p>Retirada de pólipos durante a colonoscopia, independente do número de pólipos.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40202542</span></div></li>
+        <li class="item" data-tipo="trat" data-via="baixa"><h3>Hemostasias de cólon</h3><p>Controle de sangramento no intestino grosso.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40202313</span></div></li>
+        <li class="item" data-tipo="trat" data-via="baixa"><h3>Retossigmoidoscopia flexível com polipectomia</h3><p>Retirada de pólipos do reto e do sigmoide.</p><div class="item__meta"><b>Por baixo</b><span>TUSS 40202682</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 · O DIA. Pan. The day of the exam, step by step, sideways. -->
+  <section class="dia" id="como-funciona" data-sc-act="flow" aria-labelledby="dia-t">
+    <div class="sc-wrap">
+      <div class="dia__top" data-sc-in data-sc-stagger="60">
+        <div>
+          <h2 class="sc-display" id="dia-t">Como é o dia <span class="hl">do exame</span></h2>
+          <p>Escolha o seu exame e acompanhe cada etapa. Vá marcando o que já está pronto.</p>
+        </div>
+        <div class="pick">
+          <p class="pick__label" id="pick-l">Vou fazer</p>
+          <div class="seg" role="group" aria-labelledby="pick-l" id="pick">
+            <button type="button" aria-pressed="true" data-v="eda">Endoscopia</button>
+            <button type="button" aria-pressed="false" data-v="colono">Colonoscopia</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="track" id="track" data-sc-in>
+        <div class="track__line" aria-hidden="true"><span class="track__fill"></span></div>
+        <span class="track__light" aria-hidden="true"></span>
+        <div class="stops" role="tablist" aria-label="Etapas do dia do exame">
+          <button class="stop" role="tab" id="stop-0" aria-controls="plan" aria-selected="true" tabindex="0" data-i="0">
+            <span class="stop__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+            <span class="stop__name">Pedido</span>
+          </button>
+          <button class="stop" role="tab" id="stop-1" aria-controls="plan" aria-selected="false" tabindex="-1" data-i="1">
+            <span class="stop__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span class="stop__name">Preparo</span>
+          </button>
+          <button class="stop" role="tab" id="stop-2" aria-controls="plan" aria-selected="false" tabindex="-1" data-i="2">
+            <span class="stop__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <span class="stop__name">No dia</span>
+          </button>
+          <button class="stop" role="tab" id="stop-3" aria-controls="plan" aria-selected="false" tabindex="-1" data-i="3">
+            <span class="stop__dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+            <span class="stop__name">Depois</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="plan" id="plan" role="tabpanel" aria-labelledby="stop-0" aria-live="polite" data-sc-in>
+        <div>
+          <p class="plan__step" id="plan-step">Etapa 1 de 4</p>
+          <h3 id="plan-title">Pedido</h3>
+          <p class="plan__text" id="plan-text"></p>
+          <div class="plan__nav">
+            <button type="button" class="prev" id="plan-prev"><svg aria-hidden="true"><use href="#i-arrow"/></svg>Anterior</button>
+            <button type="button" class="next" id="plan-next">Próxima etapa<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="check">
+          <div class="check__head"><span class="check__title" id="check-title">Seu checklist</span><span class="check__count" id="check-count"></span></div>
+          <div class="check__bar" aria-hidden="true"><i id="check-bar"></i></div>
+          <ul id="check-list"></ul>
+          <p class="check__note">Orientação geral. A equipe envia as instruções completas do seu exame pelo WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="dia__end" data-sc-in>
+        <p>Ficou dúvida? <span class="hl">Pergunte antes.</span></p>
+        <a class="btn" id="dia-cta" href="https://wa.me/5513991763785" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar exame</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · PREVENÇÃO. Flow + reveal. The one line addressed to "você". -->
+  <section class="prev" data-sc-act="flow" aria-labelledby="prev-t">
+    <div class="prev__frame" data-sc-reveal="right" data-sc-reveal-at="0.06 0.42">
+      <picture>
+        <source media="(max-width: 860px)" srcset="assets/prevencao-m.webp">
+        <img src="assets/prevencao.webp" width="2000" height="1131" alt="Mulher de cerca de cinquenta anos tomando café junto à janela, com vista para o mar" loading="lazy">
+      </picture>
+      <div class="prev__mask" aria-hidden="true"></div>
+      <div class="prev__copy" data-sc-in data-sc-stagger="70">
+        <h2 class="sc-display" id="prev-t">Tem 45 anos ou mais? <span class="hl">A colonoscopia é para você.</span></h2>
+        <p>Mesmo sem sintomas. O câncer colorretal está entre os mais frequentes no Brasil, e na colonoscopia os pólipos podem ser encontrados e retirados no mesmo exame. Com histórico na família, converse com seu médico sobre começar antes.</p>
+        <p class="kicker">Cuidar hoje é viver melhor amanhã.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · AGENDAR. Pin, last element, holds. The light becomes the pin on the map. -->
+  <section class="fim" id="onde" data-sc-act="pin" data-sc-span="1.3" aria-labelledby="fim-t">
+    <div data-sc-stage class="fim__stage">
+      <div class="fim__main">
+        <div data-sc-cue="0 1 0 0" data-sc-rise="0">
+          <h2 class="sc-display" id="fim-t">Agende<br><span class="hl">seu exame.</span></h2>
+          <p class="fim__lede">Fale com a equipe pelo WhatsApp: envie o pedido médico e tire suas dúvidas sobre preparo, convênios e horários.</p>
+          <div class="fim__cta">
+            <a class="btn btn--lg" href="https://wa.me/5513991763785?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20exame." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Agendar exame</a>
+            <a class="fim__phone" href="tel:+5513991763785">(13) 99176-3785</a>
+          </div>
+        </div>
+        <div class="place place--map" data-sc-cue="0 1 0 0" data-sc-rise="0">
+          <div class="map" id="map" role="region" aria-label="Mapa interativo com a localização da CEG">
+            <span class="map__fallback" aria-hidden="true"></span>
+          </div>
+          <div class="place__info">
+            <div class="place__head">
+              <h3>Onde estamos</h3>
+              <button type="button" class="chip chip--reset" id="mapReset" hidden>Recentralizar</button>
+            </div>
+            <address>Av. Dep. Emílio Carlos, 238 · Vila Maia · Guarujá/SP · CEP 11410-140</address>
+            <div class="place__go">
+              <a class="chip" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Dep.%20Em%C3%ADlio%20Carlos%2C%20238%2C%20Vila%20Maia%2C%20Guaruj%C3%A1%20SP" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Como chegar</a>
+              <a class="chip" href="https://waze.com/ul?q=Av.%20Dep.%20Em%C3%ADlio%20Carlos%2C%20238%2C%20Guaruj%C3%A1%20SP&amp;navigate=yes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8z"/></svg>Abrir no Waze</a>
+            </div>
+            <div class="place__rows">
+              <span>Estacionamento na frente</span>
+              <span>Instagram <a href="https://www.instagram.com/cegguaruja/" target="_blank" rel="noopener">@cegguaruja</a></span>
+              <span><span class="stars" aria-hidden="true">★</span> 4,8 no Google · 16 avaliações</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="foot">
+        <span class="brand" aria-hidden="true">
+          <span class="brand__icons"><svg><use href="#ico-stomach"/></svg><svg><use href="#ico-gut"/></svg></span>
+          <span class="brand__type"><span class="brand__word">CEG</span><span class="brand__sub">Clínica de Endoscopia do Guarujá</span></span>
+        </span>
+        <p>CEG Clínica de Endoscopia do Guarujá Ltda. · CNPJ 14.989.482/0001-69 · Diretor clínico: Dr. Thiago De Bortoli Nogueira · CRM 115100 · RQE 75318</p>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<script src="scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script>
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var clamp = function (v, a, b) { return Math.min(b, Math.max(a, v)); };
+  var map = function (v, a, b) { return clamp((v - a) / (b - a), 0, 1); };
+  var smooth = function (t) { return t * t * (3 - 2 * t); };
+  var P = function (el) { return parseFloat(el.style.getPropertyValue('--sc-p')) || 0; };
+
+  /* ---------------------------------------------------- hero planes ---- */
+  var hero = document.getElementById('hero');
+  var planes = [].slice.call(hero.querySelectorAll('[data-depth]')).map(function (el) {
+    return { el: el, d: parseFloat(el.dataset.depth) };
+  });
+  var mx = 0, my = 0, tx = 0, ty = 0;
+  if (fine && !reduce) addEventListener('pointermove', function (e) {
+    tx = e.clientX / innerWidth - 0.5; ty = e.clientY / innerHeight - 0.5;
+  }, { passive: true });
+
+  /* A small light travels the glass stomach, the endoscope's route in
+     miniature: esophagus, body, antrum, duodenum. On its own clock when
+     motion is allowed; under reduced motion it follows the reader's scroll. */
+  var art = hero.querySelector('.hero__art');
+  var hGlow = document.getElementById('heroGlow'), hCore = document.getElementById('heroCore');
+  var tallMQ = matchMedia('(max-width: 860px), (max-aspect-ratio: 13/10)');
+  var ROUTE_D = [[0.7075, 0.1478], [0.715, 0.2508], [0.74, 0.2956], [0.8, 0.3762], [0.845, 0.5017], [0.8125, 0.6271], [0.74, 0.6987], [0.665, 0.6584], [0.6275, 0.5957], [0.5925, 0.5957], [0.575, 0.6495], [0.5925, 0.7032]];
+  var ROUTE_M = [[0.512, 0.0851], [0.5258, 0.1445], [0.5717, 0.1703], [0.6817, 0.2167], [0.7643, 0.2889], [0.7047, 0.3612], [0.5717, 0.4024], [0.4341, 0.3792], [0.3653, 0.3431], [0.301, 0.3431], [0.2689, 0.3741], [0.301, 0.405]];
+  function along(pts, t) {
+    var n = pts.length - 1, f = Math.min(t, 0.9999) * n, i = Math.floor(f), u = f - i;
+    var p0 = pts[Math.max(i - 1, 0)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(i + 2, n)];
+    var cr = function (a, b, c, d) { return 0.5 * ((2 * b) + (-a + c) * u + (2 * a - 5 * b + 4 * c - d) * u * u + (-a + 3 * b - 3 * c + d) * u * u * u); };
+    return [cr(p0[0], p1[0], p2[0], p3[0]), cr(p0[1], p1[1], p2[1], p3[1])];
+  }
+  var t0 = performance.now();
+  function heroLight(hp) {
+    var t, a;
+    if (reduce) { t = clamp(hp * 1.6, 0, 1); a = 0.9; }
+    else {
+      var cyc = ((performance.now() - t0) / 1000) % 8.5;
+      t = smooth(clamp(cyc / 6.2, 0, 1));
+      a = map(cyc, 0, 0.6) * (1 - map(cyc, 6.2, 7.2));
+    }
+    var pt = along(tallMQ.matches ? ROUTE_M : ROUTE_D, t);
+    var w = art.offsetWidth, h = art.offsetHeight;
+    var tr = 'translate3d(' + (pt[0] * w).toFixed(1) + 'px,' + (pt[1] * h).toFixed(1) + 'px,0)';
+    hGlow.style.transform = tr; hCore.style.transform = tr;
+    hGlow.style.opacity = (a * 0.9).toFixed(3); hCore.style.opacity = a.toFixed(3);
+  }
+
+  /* ---------------------------------------------------- sinais lean ---- */
+  var leans = [].slice.call(document.querySelectorAll('[data-lean]'));
+
+  /* ---------------------------------------------------- the route ------ */
+  var rota = document.getElementById('rota');
+  var stage = rota.querySelector('[data-sc-stage]');
+  var pU = document.getElementById('pathU'), pL = document.getElementById('pathL');
+  var lenU = pU.getTotalLength(), lenL = pL.getTotalLength();
+  var mkU = [].slice.call(rota.querySelectorAll('.mk')), mkL = [].slice.call(rota.querySelectorAll('.mkL'));
+  var traceU = document.getElementById('traceU'), traceL = document.getElementById('traceL');
+  var maskLight = document.getElementById('maskLight'), glow = document.getElementById('glow');
+  var baseImg = document.getElementById('baseImg');
+  var labels = [].slice.call(rota.querySelectorAll('#labels text'));
+  function dash(el, len, t) {
+    el.style.strokeDasharray = len + ' ' + len;
+    el.style.strokeDashoffset = (len * (1 - t)).toFixed(1);
+  }
+  function route(p) {
+    var tU = smooth(map(p, 0.06, 0.40)), tL = smooth(map(p, 0.49, 0.83));
+    mkU.forEach(function (m) { dash(m, lenU, tU); });
+    mkL.forEach(function (m) { dash(m, lenL, tL); });
+    clipTrace(traceU, lenU, tU);
+    clipTrace(traceL, lenL, tL);
+
+    var onUpper = p < 0.465;
+    var pt = onUpper ? pU.getPointAtLength(lenU * tU) : pL.getPointAtLength(lenL * tL);
+    var a;
+    if (onUpper) a = map(p, 0.0, 0.05) * (1 - map(p, 0.43, 0.465));
+    else a = map(p, 0.465, 0.5) * (1 - map(p, 0.86, 0.93));
+    maskLight.setAttribute('cx', pt.x.toFixed(1)); maskLight.setAttribute('cy', pt.y.toFixed(1));
+    glow.setAttribute('cx', pt.x.toFixed(1)); glow.setAttribute('cy', pt.y.toFixed(1));
+    maskLight.setAttribute('opacity', a.toFixed(3));
+    glow.setAttribute('opacity', a.toFixed(3));
+    glow.setAttribute('r', (reduce ? 140 : 130 + 26 * Math.sin(performance.now() / 420)).toFixed(1));
+    var full = map(p, 0.84, 0.95);
+    baseImg.setAttribute('opacity', (0.07 + 0.93 * full).toFixed(3));
+    labels.forEach(function (lb) {
+      var t = lb.dataset.at === 'u' ? tU : tL, at = parseFloat(lb.dataset.t);
+      var started = lb.dataset.at === 'u' ? p > 0.02 : p > 0.48;
+      var o = started ? clamp((t - at + 0.06) / 0.06, 0, 1) : 0;
+      lb.setAttribute('opacity', (o * (0.55 + 0.45 * (1 - full))).toFixed(2));
+    });
+    stage.setAttribute('data-sc-verify-state', [tU.toFixed(2), tL.toFixed(2), a.toFixed(2), full.toFixed(2)].join('|'));
+  }
+  // Reveal a dotted stroke up to t: dashes alternate 2 on / 16 off, then one
+  // long gap hides the remainder. Building the array this way keeps the dots
+  // fixed in place while the line grows, instead of crawling.
+  function clipTrace(el, len, t) {
+    var shown = len * t;
+    if (shown < 1) { el.style.opacity = 0; return; }
+    el.style.opacity = 1;
+    var n = Math.floor(shown / 18), arr = [];
+    for (var i = 0; i < n; i++) arr.push(2, 16);
+    arr.push(Math.max(shown - n * 18, 0.01), len + 20);
+    el.style.strokeDasharray = arr.join(' ');
+    el.style.strokeDashoffset = 0;
+  }
+
+  /* ---------------------------------------------------- bar theme ------ */
+  var bar = document.getElementById('bar');
+
+
+  function frame() {
+    var hp = P(hero);
+    mx += (tx - mx) * 0.06; my += (ty - my) * 0.06;
+    if (!reduce) {
+      planes.forEach(function (pl) {
+        var d = pl.d, y = -hp * 120 * d, s = 1 + hp * 0.12 * d;
+        var px = -mx * 14 * d, py = -my * 10 * d;
+        pl.el.style.transform = 'translate3d(' + px.toFixed(1) + 'px,' + (y + py).toFixed(1) + 'px,0) scale(' + s.toFixed(4) + ')';
+      });
+      var vh = innerHeight;
+      leans.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -50 || r.top > vh + 50) return;
+        var k = (r.top + r.height / 2) / vh - 0.5;
+        el.style.transform = 'translate3d(' + (k * parseFloat(el.dataset.lean) * -5).toFixed(2) + 'vw,0,0)';
+      });
+    }
+    heroLight(hp);
+    var rp = P(rota);
+    route(rp);
+    var rr = rota.getBoundingClientRect();
+    bar.classList.toggle('is-night', rr.top < 40 && rr.bottom > 40);
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // A keyboard user can tab into a flow block before its entrance has fired,
+  // which would put focus on a control still at opacity 0. Open it at once.
+  document.addEventListener('focusin', function (e) {
+    var box = e.target.closest && e.target.closest('[data-sc-in]');
+    if (!box) return;
+    box.classList.add('sc-in');
+    [].slice.call(box.querySelectorAll('[data-sc-stagger] > *')).concat([].slice.call(box.children)).forEach(function (c) { c.classList.add('sc-in'); });
+  });
+
+  /* ---------------------------------------------------- day planner ---- */
+  (function () {
+    var DAY = [
+      { t: 'Pedido', text: { eda: 'Os exames são feitos com pedido do seu médico. Mande uma foto dele pelo WhatsApp e escolha o melhor horário.', colono: 'Os exames são feitos com pedido do seu médico. Mande uma foto dele pelo WhatsApp e escolha o melhor horário.' },
+        items: { eda: ['Separar o pedido médico', 'Tirar uma foto legível do pedido', 'Enviar pelo WhatsApp e escolher o horário'],
+                 colono: ['Separar o pedido médico', 'Tirar uma foto legível do pedido', 'Enviar pelo WhatsApp e escolher o horário'] } },
+      { t: 'Preparo', text: { eda: 'Para a endoscopia, o principal é o jejum. Você recebe o horário certo junto com a confirmação.', colono: 'Para a colonoscopia, o intestino precisa estar limpo. Você recebe a dieta e o preparo com antecedência.' },
+        items: { eda: ['Fazer o jejum conforme a orientação recebida', 'Avisar se usa remédios contínuos, principalmente anticoagulantes', 'Combinar quem vai te acompanhar'],
+                 colono: ['Seguir a dieta leve dos dias anteriores', 'Tomar o preparo intestinal nos horários indicados', 'Avisar se usa remédios contínuos, principalmente anticoagulantes', 'Combinar quem vai te acompanhar'] } },
+      { t: 'No dia', text: { eda: 'Chegue com um pouco de antecedência. O exame em si é rápido.', colono: 'Chegue com um pouco de antecedência, com o preparo concluído.' },
+        items: { eda: ['Documento com foto', 'Pedido médico', 'Carteirinha do convênio, se tiver', 'Acompanhante maior de idade (exames com sedação)'],
+                 colono: ['Documento com foto', 'Pedido médico', 'Carteirinha do convênio, se tiver', 'Acompanhante maior de idade (exames com sedação)', 'Roupa confortável'] } },
+      { t: 'Depois', text: { eda: 'Você descansa na clínica até ser liberado, com as orientações de alta.', colono: 'Você descansa na clínica até ser liberado, com as orientações de alta.' },
+        items: { eda: ['Descansar até a liberação', 'Não dirigir no restante do dia, se houve sedação', 'Levar o laudo ao médico que pediu o exame'],
+                 colono: ['Descansar até a liberação', 'Não dirigir no restante do dia, se houve sedação', 'Levar o laudo ao médico que pediu o exame'] } }
+    ];
+    var EX = { eda: 'endoscopia', colono: 'colonoscopia' };
+    var track = document.getElementById('track'), stopsEl = [].slice.call(track.querySelectorAll('.stop'));
+    var plan = document.getElementById('plan'), list = document.getElementById('check-list');
+    var $ = function (id) { return document.getElementById(id); };
+    var state = { i: 0, ex: 'eda', done: {} };
+    try { var saved = JSON.parse(localStorage.getItem('ceg-dia') || 'null'); if (saved) { state.ex = saved.ex || 'eda'; state.done = saved.done || {}; } } catch (e) {}
+    var save = function () { try { localStorage.setItem('ceg-dia', JSON.stringify({ ex: state.ex, done: state.done })); } catch (e) {} };
+    var userDriven = false;
+
+    function stepDone(i) {
+      var items = DAY[i].items[state.ex];
+      return items.every(function (_, k) { return state.done[state.ex + ':' + i + ':' + k]; });
+    }
+    function render(swap) {
+      var d = DAY[state.i], items = d.items[state.ex];
+      track.style.setProperty('--i', state.i);
+      stopsEl.forEach(function (b, k) {
+        var on = k === state.i;
+        b.setAttribute('aria-selected', String(on)); b.tabIndex = on ? 0 : -1;
+        b.classList.toggle('is-done', k !== state.i && stepDone(k));
+      });
+      plan.setAttribute('aria-labelledby', 'stop-' + state.i);
+      var paint = function () {
+        $('plan-step').textContent = 'Etapa ' + (state.i + 1) + ' de 4';
+        $('plan-title').textContent = d.t;
+        $('plan-text').textContent = d.text[state.ex];
+        $('check-title').textContent = 'Checklist · ' + d.t.toLowerCase();
+        list.innerHTML = '';
+        items.forEach(function (txt, k) {
+          var key = state.ex + ':' + state.i + ':' + k;
+          var li = document.createElement('li');
+          li.innerHTML = '<label><input type="checkbox"' + (state.done[key] ? ' checked' : '') + '><span></span></label>';
+          li.querySelector('span').textContent = txt;
+          li.querySelector('input').addEventListener('change', function (e) { state.done[key] = e.target.checked; save(); count(); });
+          list.appendChild(li);
+        });
+        $('plan-prev').disabled = state.i === 0;
+        $('plan-next').disabled = state.i === DAY.length - 1;
+        count();
+        plan.classList.remove('is-swapping');
+      };
+      if (swap && !reduce) { plan.classList.add('is-swapping'); setTimeout(paint, 160); } else paint();
+      var msg = 'Olá! Vou fazer uma ' + EX[state.ex] + ' e tenho uma dúvida sobre a etapa "' + d.t + '".';
+      $('dia-cta').href = 'https://wa.me/5513991763785?text=' + encodeURIComponent(msg);
+    }
+    function count() {
+      var items = DAY[state.i].items[state.ex], n = 0;
+      items.forEach(function (_, k) { if (state.done[state.ex + ':' + state.i + ':' + k]) n++; });
+      $('check-count').textContent = n + ' de ' + items.length + (n === items.length ? ' · pronto' : ' prontos');
+      $('check-bar').style.transform = 'scaleX(' + (n / items.length).toFixed(3) + ')';
+    }
+    function go(i, fromUser) {
+      i = Math.max(0, Math.min(DAY.length - 1, i));
+      if (fromUser) userDriven = true;
+      if (i === state.i) return;
+      state.i = i; render(true);
+    }
+    stopsEl.forEach(function (b, k) {
+      b.addEventListener('click', function () { go(k, true); });
+      b.addEventListener('keydown', function (e) {
+        var to = e.key === 'ArrowRight' ? state.i + 1 : e.key === 'ArrowLeft' ? state.i - 1 : e.key === 'Home' ? 0 : e.key === 'End' ? 3 : null;
+        if (to === null) return;
+        e.preventDefault(); go(to, true); stopsEl[state.i].focus();
+      });
+    });
+    $('plan-prev').addEventListener('click', function () { go(state.i - 1, true); });
+    $('plan-next').addEventListener('click', function () { go(state.i + 1, true); });
+    [].slice.call(document.querySelectorAll('#pick button')).forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.v === state.ex));
+      b.addEventListener('click', function () {
+        state.ex = b.dataset.v; save();
+        [].slice.call(document.querySelectorAll('#pick button')).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        render(true);
+      });
+    });
+    // When the section first comes into view the light makes one pass along
+    // the track and settles back on the first stop, so the line reads as
+    // something you can move. Content never changes under the reader.
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        io.disconnect();
+        [1, 2, 3, 0].forEach(function (k, n) {
+          setTimeout(function () { if (!userDriven) track.style.setProperty('--i', k); }, 350 + n * 520);
+        });
+      }, { threshold: 0.9 });
+      io.observe(track);
+    }
+    render(false);
+  })();
+
+  /* ---------------------------------------------------- filters -------- */
+  var state = { tipo: '', via: '' };
+  var items = [].slice.call(document.querySelectorAll('#list .item'));
+  var count = document.getElementById('count');
+  items.forEach(function (li) {
+    var name = li.querySelector('h3').textContent;
+    var a = document.createElement('a');
+    a.className = 'item__go';
+    a.href = 'https://wa.me/5513991763785?text=' + encodeURIComponent('Olá! Gostaria de agendar: ' + name + '.');
+    a.target = '_blank'; a.rel = 'noopener';
+    a.setAttribute('aria-label', 'Agendar exame: ' + name);
+    a.innerHTML = 'Agendar <svg aria-hidden="true"><use href="#i-arrow"/></svg>';
+    li.appendChild(a);
+  });
+  [].slice.call(document.querySelectorAll('[data-filter]')).forEach(function (g) {
+    g.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      [].slice.call(g.querySelectorAll('button')).forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      state[g.dataset.filter] = b.dataset.v;
+      var n = 0;
+      items.forEach(function (li) {
+        var ok = (!state.tipo || li.dataset.tipo === state.tipo) && (!state.via || li.dataset.via.split(' ').indexOf(state.via) > -1);
+        li.hidden = !ok; if (ok) n++;
+      });
+      count.textContent = 'Mostrando ' + n + (n === 1 ? ' exame' : ' exames');
+    });
+  });
+})();
+</script>
+<script>
+/* The close becomes a place: as the last section slides in, the camera comes
+   down from the city to the clinic's block, tilting into 3D. Driven by the
+   reader's scroll, so it works with reduced motion too; only the slow orbit
+   after arrival is motion-gated. The visitor can grab the map at any time. */
+(function () {
+  var el = document.getElementById('map'), sec = document.getElementById('onde');
+  if (!el || !sec) return;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  // Pin on the CEP 11410-140 stretch of the avenue (number-level position to confirm with the clinic).
+  var CLINIC = [-46.2523, -23.98947];
+  var CITY = [-46.2600, -23.9985];
+  var VIEW = [-46.2538, -23.9922];
+  var VIEW_N = [-46.2529, -23.9912];   // narrow cards keep the pin in frame   // final framing: the clinic plus the sea at Pitangueiras
+  var STREET = [[-46.24897,-23.98912],[-46.24989,-23.98913],[-46.25014,-23.98911],[-46.25054,-23.98904],[-46.25093,-23.98899],[-46.25126,-23.989],[-46.25161,-23.98908],[-46.25207,-23.98932],[-46.25309,-23.98997]];
+  var map, ready = false, user = false, orbit = 0, last = 0;
+  var visible = false, raf = 0, lastQ = -1, arrivedAt = 0;
+  var resetBtn = document.getElementById('mapReset');
+  var clamp = function (v) { return Math.min(1, Math.max(0, v)); };
+  var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+  var lerp = function (a, b, t) { return a + (b - a) * t; };
+
+  function inject() {
+    var css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css';
+    document.head.appendChild(css);
+    var js = document.createElement('script');
+    js.src = 'https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js';
+    js.onload = init;
+    document.head.appendChild(js);
+  }
+  // Low-end devices, data saver, or no WebGL: a still of the resolved frame,
+  // with the same pin and route buttons. Nothing heavy is downloaded.
+  function hasWebGL() {
+    try { var c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch (e) { return false; }
+  }
+  var conn = navigator.connection || {};
+  var lowEnd = conn.saveData === true || /(^|-)2g$/.test(conn.effectiveType || '') ||
+               (navigator.deviceMemory && navigator.deviceMemory <= 2) ||
+               (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
+  if (lowEnd || !hasWebGL()) {
+    el.classList.add('is-static');
+    el.setAttribute('aria-label', 'Mapa com a localização da CEG na Av. Dep. Emílio Carlos, 238');
+    return;
+  }
+  var io = new IntersectionObserver(function (es) {
+    if (es[0].isIntersecting) { io.disconnect(); inject(); }
+  }, { rootMargin: '1400px 0px' });
+  io.observe(sec);
+  // Only work while the close section is actually on screen.
+  new IntersectionObserver(function (es) {
+    visible = es[0].isIntersecting;
+    if (visible) kick(); else arrivedAt = 0;
+  }).observe(sec);
+  addEventListener('scroll', kick, { passive: true });
+  addEventListener('resize', function () { lastQ = -1; kick(); });
+  function kick() { if (!raf) raf = requestAnimationFrame(step); }
+
+  function paint(id, prop, val) { try { if (map.getLayer(id)) map.setPaintProperty(id, prop, val); } catch (e) {} }
+  function brand() {
+    paint('background', 'background-color', '#F3EBE2');
+    paint('water', 'fill-color', '#CBE0E8');
+    paint('park', 'fill-color', '#E4EAD5');
+    paint('landcover_wood', 'fill-color', '#E1E8D2');
+    paint('landuse_residential', 'fill-color', '#EFE6DB');
+    paint('building', 'fill-color', '#E6DACC');
+    paint('highway_minor', 'line-color', '#FFFFFF');
+    paint('highway_path', 'line-color', '#FBF6F1');
+    ['highway_major_inner', 'highway_major_subtle'].forEach(function (id) { paint(id, 'line-color', '#FBE3CF'); });
+    paint('highway_major_casing', 'line-color', '#EFCFB3');
+    ['highway_motorway_inner', 'highway_motorway_subtle', 'highway_motorway_bridge_inner'].forEach(function (id) { paint(id, 'line-color', '#F6C9A3'); });
+    map.getStyle().layers.forEach(function (l) {
+      if (l.type === 'symbol') { paint(l.id, 'text-color', '#6B5A4F'); paint(l.id, 'text-halo-color', '#F7F0E8'); }
+    });
+    var firstLabel = map.getStyle().layers.find(function (l) { return l.type === 'symbol'; });
+    var before = firstLabel ? firstLabel.id : undefined;
+    try {
+      map.addLayer({ id: 'ceg-3d', type: 'fill-extrusion', source: 'openmaptiles', 'source-layer': 'building', minzoom: 14,
+        paint: { 'fill-extrusion-color': '#EADFD2', 'fill-extrusion-opacity': 0.92,
+                 'fill-extrusion-height': ['coalesce', ['get', 'render_height'], 7],
+                 'fill-extrusion-base': ['coalesce', ['get', 'render_min_height'], 0] } }, before);
+    } catch (e) {}
+    map.addSource('ceg-street', { type: 'geojson', data: { type: 'Feature', geometry: { type: 'LineString', coordinates: STREET } } });
+    map.addLayer({ id: 'ceg-street-glow', type: 'line', source: 'ceg-street', layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#FF8A45', 'line-width': 14, 'line-blur': 8, 'line-opacity': 0.45 } }, before);
+    map.addLayer({ id: 'ceg-street', type: 'line', source: 'ceg-street', layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: { 'line-color': '#E2590B', 'line-width': 4 } }, before);
+  }
+
+  function init() {
+    try {
+      map = new maplibregl.Map({
+        container: el, style: 'https://tiles.openfreemap.org/styles/positron',
+        center: CITY, zoom: 12.6, pitch: 0, bearing: -20, maxPitch: 70,
+        scrollZoom: false, dragPan: fine, dragRotate: fine, touchPitch: false,
+        attributionControl: { compact: true }, fadeDuration: 0,
+        pixelRatio: Math.min(window.devicePixelRatio || 1, 1.5)
+      });
+    } catch (e) { return; }
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), 'top-right');
+    map.on('load', function () {
+      brand();
+      var pin = document.createElement('div');
+      pin.className = 'map-pin';
+      pin.innerHTML = '<span class="map-pin__tag">CEG · nº 238</span>';
+      new maplibregl.Marker({ element: pin, anchor: 'center' }).setLngLat(CLINIC).addTo(map);
+      ready = true; el.classList.add('is-ready'); lastQ = -1; kick();
+    });
+    ['dragstart', 'rotatestart', 'pitchstart', 'zoomstart'].forEach(function (ev) {
+      map.on(ev, function (e) { if (e.originalEvent) { user = true; resetBtn.hidden = false; } });
+    });
+    resetBtn.addEventListener('click', function () { user = false; resetBtn.hidden = true; lastQ = -1; kick(); });
+  }
+
+  // One frame of camera work. Runs on scroll; keeps itself alive only for the
+  // short orbit after arrival, then the map sits idle and costs nothing.
+  function step(now) {
+    raf = 0;
+    var dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
+    if (!ready || user || !visible) return;
+    var r = sec.getBoundingClientRect(), vh = innerHeight;
+    var travel = Math.max(sec.offsetHeight - vh, 1);
+    var q = clamp((vh - r.top) / (vh + travel));
+    var moved = Math.abs(q - lastQ) > 0.0004;
+    lastQ = q;
+    var orbiting = false;
+    if (!reduce && q > 0.98) {
+      if (!arrivedAt) arrivedAt = now;
+      var age = (now - arrivedAt) / 1000;
+      if (age < 12) { orbit += dt * 3.2 * (1 - age / 12); orbiting = true; }   // eases to a stop
+    } else if (q < 0.9) { arrivedAt = 0; }
+    if (moved || orbiting) {
+      var e = ease(q);
+      var narrow = el.offsetWidth < 560;
+      var V = narrow ? VIEW_N : VIEW, Z = narrow ? 14.9 : 15.3;
+      map.jumpTo({
+        center: [lerp(CITY[0], V[0], e), lerp(CITY[1], V[1], e)],
+        zoom: lerp(12.6, Z, e), pitch: lerp(0, 55, e), bearing: lerp(-20, 168, e) + orbit
+      });
+    }
+    if (orbiting) raf = requestAnimationFrame(step);
+  }
+})();
+</script>
+</body>
+</html>
